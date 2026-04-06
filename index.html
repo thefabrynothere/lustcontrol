@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>God’s Child Mode</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .status {
+      font-size: 20px;
+      margin: 15px 0;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #1f1f1f;
+      color: white;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="mainScreen">
+      <h1>😤✝️ Yo twin… what are we doing?</h1>
+      <p>God saw that… but He still choosing you.</p>
+
+      <div class="status">Status: Child of God 👑</div>
+
+      <button onclick="pray()">🙏 Pray</button>
+      <button onclick="resetMode()">💪 Reset</button>
+      <button onclick="chill()">🧠 Chill</button>
+    </div>
+
+    <div id="outputScreen" class="hidden">
+      <div id="outputText" class="message"></div>
+      <button onclick="goBack()">⬅ Back</button>
+    </div>
+  </div>
+
+  <script>
+    const mainScreen = document.getElementById("mainScreen");
+    const outputScreen = document.getElementById("outputScreen");
+    const outputText = document.getElementById("outputText");
+
+    function showOutput(text) {
+      mainScreen.classList.add("hidden");
+      outputScreen.classList.remove("hidden");
+      outputText.innerText = text;
+    }
+
+    function pray() {
+      showOutput(
+        "🙏 Jesus, keep me close.\n\nYou’re not alone.\nStay with Him a moment."
+      );
+    }
+
+    function resetMode() {
+      showOutput(
+        "💪 Breathe in… breathe out…\n\nYou’re back in control.\nThis urge will pass."
+      );
+    }
+
+    function chill() {
+      showOutput(
+        "😂 Bro relax… God’s got you.\n\nYou’re a Child of God 👑\nGo do something better fr."
+      );
+    }
+
+    function goBack() {
+      outputScreen.classList.add("hidden");
+      mainScreen.classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
